@@ -1,0 +1,35 @@
+$background : #F9F7F7;
+$button : #3F72AF;
+$cardbook : #DBE2EF;
+$navfoot : #112D4E;
+
+$textWhite : #FFFFFF;
+$textAbuGelap : #222831;
+$textdes : 	#222831;
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+$font-poppins: 'Poppins', sans-serif;
+$font-open-sans: 'Open Sans', sans-serif;
+
+.Hero{
+  background: url('./../../img/1.png') no-repeat center center/cover;
+}
+.navbar {
+    background-color: $navfoot;
+    font-family: $font-poppins;
+    color: $textWhite;
+    .navbar-toggler {
+  border-color: white;
+  .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.navbarNav{
+    margin-right: 800px;
+}
+}
+
+
+
+}

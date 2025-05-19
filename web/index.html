@@ -1,11 +1,315 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Akira</title>
+  <link rel="icon" href="/img/Modern Public Book Library Logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- link css -->
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
-    <h1></h1>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg  m-2 m-md-3 m-lg-3 ms-2 ms-md-3 ms-lg-5 me-2 me-md-3 me-lg-5 p-2 rounded-5 shadow fixed-top">
+  <div class="container">
+    <a class="navbar-brand me-0 me-md-3 me-lg-5 d-flex align-items-center text-white fs-4 fw-medium" href="#">
+      <img src="/img/Modern Public Book Library Logo.png" alt="logo-cario" style="width: 80px;"/>
+      Akira
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse ms-0 ms-md-3 ms-lg-5" id="navbarNav">
+      <ul class="navbar-nav  mx-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Beranda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Kategori</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Semua Buku</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Rekomendasi</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Tentang Kami</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Kontak</a>
+        </li>
+      </ul>
+
+      <!-- Tombol Login & Register -->
+      <div class="d-flex mb-2 mt-2">
+        <a href="/AI ( ChatBoot)/Auth/login.html" class="btn btn-outline-light me-2">Masuk</a>
+        <a href="/AI ( ChatBoot)/Auth/register.html" class="btn btn-light text-dark">Daftar</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- End Navbar -->
+
+
+  <!-- Hero Section -->
+  <section class="Hero min-vh-100 d-flex flex-column justify-content-center align-items-center p-5 bg-light">
+    <h1>Temukan Buku Favoritmu di Akira</h1>
+    <p class="lead">Jelajahi ribuan buku dari berbagai genre dan penulis.</p>
+    <form class="d-flex justify-content-center" role="search">
+      <input class="form-control w-50" type="search" placeholder="Cari buku, penulis, kategori..." aria-label="Search" />
+      <button class="btn btn-primary ms-2" type="submit">Jelajahi Koleksi</button>
+    </form>
+  </section>
+
+  <!-- Kategori Buku Populer -->
+  <section class="container my-5">
+    <h2>Kategori Buku Populer</h2>
+    <div class="row g-3 mt-3">
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://via.placeholder.com/300x150?text=Fiksi" class="card-img-top" alt="Fiksi" />
+          <div class="card-body">
+            <h5 class="card-title">Fiksi</h5>
+            <p class="card-text">1200 Buku</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://via.placeholder.com/300x150?text=Non-Fiksi" class="card-img-top" alt="Non-Fiksi" />
+          <div class="card-body">
+            <h5 class="card-title">Non-Fiksi</h5>
+            <p class="card-text">800 Buku</p>
+          </div>
+        </div>
+      </div>
+      <!-- Tambah kategori lain sesuai kebutuhan -->
+    </div>
+  </section>
+
+  <!-- Buku Baru / Rilis Terbaru -->
+  <section class="container my-5">
+    <h2>Buku Baru</h2>
+    <div class="row g-4 mt-3">
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://via.placeholder.com/200x300?text=Buku+1" class="card-img-top" alt="Buku 1" />
+          <div class="card-body">
+            <h6 class="card-title">Judul Buku 1</h6>
+            <p class="card-text">Pengarang A</p>
+            <small>⭐ 4.5</small>
+          </div>
+        </div>
+      </div>
+      <!-- Tambah buku baru lain -->
+    </div>
+  </section>
+
+  <!-- Rekomendasi untukmu -->
+  <section class="container my-5">
+    <h2>Rekomendasi untukmu</h2>
+    <div class="row g-4 mt-3">
+      <!-- Kartu buku rekomendasi -->
+    </div>
+  </section>
+
+  <!-- Buku Terpopuler -->
+  <section class="container my-5">
+    <h2>Buku Terpopuler</h2>
+    <div class="row g-4 mt-3">
+      <!-- Kartu buku populer -->
+    </div>
+  </section>
+
+  <!-- Kenapa Harus Akira -->
+  <section class="container my-5">
+    <h2>Kenapa Harus Akira</h2>
+    <ul>
+      <li>Koleksi buku lengkap dari berbagai genre</li>
+      <li>Review dan rating dari pembaca</li>
+      <li>Bookmark dan simpan daftar baca</li>
+      <li>Komunitas pembaca aktif</li>
+    </ul>
+  </section>
+
+  <!-- Testimoni Pengguna -->
+  <section class="container my-5">
+    <h2>Testimoni Pengguna</h2>
+    <blockquote class="blockquote">
+      <p>"Akira membantu saya menemukan banyak buku inspiratif dengan mudah!"</p>
+      <footer class="blockquote-footer">Dewi, pembaca aktif</footer>
+    </blockquote>
+  </section>
+
+
+  <!-- Tentang Kami -->
+  <section class="container my-5">
+    <h2>Tentang Akira</h2>
+    <p>Akira adalah platform yang menghubungkan para pecinta buku dengan ribuan koleksi lengkap dari berbagai genre dan penulis.</p>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="container my-5">
+    <h2>FAQ (Pertanyaan yang Sering Diajukan)</h2>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq1-heading">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+            Bagaimana cara mendaftar di Akira?
+          </button>
+        </h2>
+        <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="faq1-heading" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Klik tombol "Daftar" di pojok kanan atas, lalu isi formulir pendaftaran dengan data yang diperlukan.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq2-heading">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+            Apakah saya bisa membaca buku secara gratis?
+          </button>
+        </h2>
+        <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq2-heading" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Beberapa buku tersedia gratis, namun ada juga buku premium yang memerlukan langganan.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq3-heading">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+            Bagaimana cara mencari buku tertentu?
+          </button>
+        </h2>
+        <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq3-heading" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Gunakan fitur pencarian di halaman utama untuk menemukan buku berdasarkan judul, penulis, atau kategori.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq4-heading">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+            Bagaimana jika saya lupa password?
+          </button>
+        </h2>
+        <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faq4-heading" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Klik "Lupa Password" pada halaman login dan ikuti instruksi untuk mengatur ulang password Anda.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="container my-5 text-center">
+    <h2>contact saya</h2>
+  </section>
+
+   <!-- footer -->
+    <footer id="footer" class="bg-white text-dark container-fluid rounded-3 border shadow-lg">
+      <div class="container-fluid text-left text-md-left">
+        <div class="row">
+          
+          <!-- Column 1 -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <img src="../img/Modern Public Book Library Logo.png" class="w-100" alt="">
+            <p>
+              "Donut Kita, Hadirkan Kelezatan di Setiap Gigitan - Donat Lezat, Bahagia Tiada Henti!"
+            </p>
+          </div>
+    
+          <!-- Column 2 -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold">Products</h5>
+            <p>
+                <a href="#donut-coklate" style="text-decoration: none;">Donut Coklat</a>
+            </p>
+            <p>
+                <a href="#donut-vanilla" style="text-decoration: none;">Donut Vanilla</a>
+            </p>
+            <p>
+                <a href="#donut-macha" style="text-decoration: none;">Donut Matcha</a>
+            </p>
+            <p>
+                <a href="#promo" style="text-decoration: none;">All-Promo</a>
+            </p>
+          </div>
+    
+          <!-- Column 3 -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3" data-aos="fade-left" data-aos-duration="1000">
+            <h5 class="text-uppercase mb-4 font-weight-bold">Social Media</h5>
+            <p>
+                <a href="https://web.whatsapp.com/" style="text-decoration: none;">Whats App</a>
+            </p>
+            <p>
+                <a href="https://www.instagram.com/" style="text-decoration: none;">Instagram</a>
+            </p>
+            <p>
+                <a href="https://x.com/" style="text-decoration: none;">Twitter</a>
+            </p>
+            <p>
+                <a href="https://www.facebook.com/" style="text-decoration: none;">Facebook</a>
+            </p>
+          </div>
+    
+          <!-- Column 4 -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3" data-aos="fade-right" data-aos-duration="1000">
+            <h5 class="text-uppercase mb-4 font-weight-bold">Contact</h5>
+            <p>
+                <a href="https://maps.app.goo.gl/7NjfnrsSfn9WKX6P6" style="text-decoration: none;"><i class="fas fa-home mr-3"></i> Sukowati, Bojonegoro, Indonesia</a>
+            </p>
+            <p>
+                <a href="https://mail.google.com/" style="text-decoration: none;"><i class="fas fa-envelope mr-3"></i> email@example.com</a>
+            </p>
+            <p>
+                <a href="#" style="text-decoration: none;"><i class="fas fa-phone mr-3"></i> + 01 234 567 88</a>
+            </p>
+            <p>
+              <a href="#" style="text-decoration: none;"> <i class="fas fa-print mr-3"></i> + 01 234 567 89</a>
+            </p>
+          </div>
+    
+        </div>
+        <hr>
+    
+        <!-- Footer Bottom -->
+        <div class="container-fluid" data-aos="fade-up" data-aos-duration="1200">
+          <div class="d-flex justify-content-center align-items-center">
+            <div class="text-center text-md-right">
+              <p>Ikuti Kami Di</p>
+                <ul class="list-unstyled list-inline">
+                  <li class="list-inline-item">
+                      <a href="https://www.facebook.com/" class="btn btn-outline-warning btn-floating m-1"><i class="fab fa-facebook-f"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                      <a href="https://x.com/" class="btn btn-outline-warning btn-floating m-1"><i class="fab fa-twitter"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                      <a href="https://www.google.com/" class="btn btn-outline-warning btn-floating m-1"><i class="fab fa-google-plus-g"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                      <a href="https://www.linkedin.com/" class="btn btn-outline-warning btn-floating m-1"><i class="fab fa-linkedin-in"></i></a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+            
+          <p class="text-center text-md-left">© 2024 Company DonutKita. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+<!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
