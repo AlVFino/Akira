@@ -17,4 +17,15 @@
 }
 .navbar .navbar-toggler .navbarNav {
   margin-right: 800px;
+}
+
+#footer {
+  background-color: #252525;
+  color: #FFFFFF;
+}
+#footer a {
+  color: #9c9c9c;
+}
+#footer a:hover {
+  color: #FFFFFF;
 }/*# sourceMappingURL=style.css.map */

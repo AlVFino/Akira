@@ -1,5 +1,5 @@
 $background : #F9F7F7;
-$button : #3F72AF;
+$biru : #3F72AF;
 $cardbook : #DBE2EF;
 $navfoot : #112D4E;
 
@@ -30,6 +30,18 @@ $font-open-sans: 'Open Sans', sans-serif;
 }
 }
 
+}
 
-
+// .About{
+//   // background: url('./../../img/sectionabout.jpg') no-repeat center center/cover;
+// }
+#footer{
+  background-color : #252525;
+  color: $textWhite;
+  a{
+    color: #9c9c9c;
+    &:hover{
+      color: $textWhite;
+    }
+  }
 }
