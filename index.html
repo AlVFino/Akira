@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Akira</title>
-  <link rel="icon" href="/img/Modern Public Book Library Logo.png">
+  <link rel="icon" href="img/Modern Public Book Library Logo.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
   <!-- link css -->
@@ -27,22 +27,22 @@
     <div class="collapse navbar-collapse ms-0 ms-md-3 ms-lg-5" id="navbarNav">
       <ul class="navbar-nav  mx-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Beranda</a>
+          <a class="nav-link text-white" href="#beranda">Beranda</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Kategori</a>
+          <a class="nav-link text-white" href="#kategori-buku">Kategori</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Semua Buku</a>
+          <a class="nav-link text-white" href="#semua_buku">Semua Buku</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Rekomendasi</a>
+          <a class="nav-link text-white" href="#rekomendasi-buku">Rekomendasi</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Tentang Kami</a>
+          <a class="nav-link text-white" href="#tentang-kami">Tentang Kami</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Kontak</a>
+          <a class="nav-link text-white" href="#kontak-kami">Kontak</a>
         </li>
       </ul>
 
@@ -58,7 +58,7 @@
 
 
   <!-- Hero Section -->
-  <section class="Hero min-vh-100 d-flex flex-column justify-content-center align-items-center p-5 bg-light">
+  <section class="Hero min-vh-100 d-flex flex-column justify-content-center align-items-center p-5 bg-light" id="beranda">
     <h1>Temukan Buku Favoritmu di Akira</h1>
     <p class="lead">Jelajahi ribuan buku dari berbagai genre dan penulis.</p>
     <form class="d-flex justify-content-center" role="search">
@@ -68,7 +68,7 @@
   </section>
 
   <!-- Kategori Buku Populer -->
-  <section class="container my-5">
+  <section class="container my-5" id="kategori-buku">
     <h2>Kategori Buku Populer</h2>
     <div class="row g-3 mt-3">
 
@@ -139,7 +139,7 @@
   </section>
 
   <!-- Buku Baru / Rilis Terbaru -->
-  <section class="container my-5">
+  <section class="container my-5" id="semua_buku">
     <h2>Buku Baru</h2>
     <div class="row g-4 mt-3">
       <div class="col-md-3">
@@ -156,27 +156,29 @@
     </div>
   </section>
 
-  <!-- Rekomendasi untukmu -->
-  <section class="container my-5">
-    <h2>Rekomendasi untukmu</h2>
-    <div class="row g-4 mt-3">
-      <!-- Kartu buku rekomendasi -->
-    </div>
-  </section>
-
   <!-- Buku Terpopuler -->
-  <section class="container my-5">
+  <section class="container my-5" id="buku-terpopuler">
     <h2>Buku Terpopuler</h2>
     <div class="row g-4 mt-3">
       <!-- Kartu buku populer -->
     </div>
   </section>
 
+  <!-- Rekomendasi untukmu -->
+  <section class="container my-5" id="rekomendasi-buku">
+    <h2>Rekomendasi untukmu</h2>
+    <div class="row g-4 mt-3">
+      <!-- Kartu buku rekomendasi -->
+    </div>
+  </section>
+
+
+
 <!-- Kenapa Harus Akira -->
-<section class="container my-5 py-4">
+<section class="container my-5 py-4" id="kenapa-akira">
   <div class="row align-items-center justify-content-center g-4">
     <div class="col-12 col-lg-6 mb-4 mb-lg-0 d-flex justify-content-center">
-      <img src="../img/kenapaAkira.png" alt="Ilustrasi Membaca" class="img-fluid rounded-4 shadow" style="max-width:400px;">
+      <img src="img/kenapaAkira.png" alt="Ilustrasi Membaca" class="img-fluid rounded-4 shadow" style="max-width:400px;">
     </div>
     <div class="col-12 col-lg-6">
       <div class="ps-lg-4">
@@ -235,8 +237,90 @@
   </div>
 </section>
 
+<!-- FAQ Section -->
+<section class="container my-5 py-4" id="faq">
+  <h2 class="text-center mb-5 fw-bold text-dark">FAQ (Pertanyaan yang Sering Diajukan)</h2>
+  
+  <div class="accordion" id="faqAccordion">
+    <!-- Item 1 -->
+    <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
+      <h2 class="accordion-header" id="faq1-heading">
+        <button class="accordion-button fw-semibold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+          <i class="bi bi-question-circle me-2 text-primary"></i> Bagaimana cara mendaftar di Akira?
+        </button>
+      </h2>
+      <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="faq1-heading" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Klik tombol "Daftar" di pojok kanan atas, lalu isi formulir pendaftaran dengan data yang diperlukan.
+        </div>
+      </div>
+    </div>
+    
+    <!-- Item 2 -->
+    <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
+      <h2 class="accordion-header" id="faq2-heading">
+        <button class="accordion-button collapsed fw-semibold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+          <i class="bi bi-book me-2 text-primary"></i> Apakah saya bisa membaca buku secara gratis?
+        </button>
+      </h2>
+      <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq2-heading" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Beberapa buku tersedia gratis, namun ada juga buku premium yang memerlukan langganan.
+        </div>
+      </div>
+    </div>
+    
+    <!-- Item 3 -->
+    <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
+      <h2 class="accordion-header" id="faq3-heading">
+        <button class="accordion-button collapsed fw-semibold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+          <i class="bi bi-search me-2 text-primary"></i> Bagaimana cara mencari buku tertentu?
+        </button>
+      </h2>
+      <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq3-heading" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Gunakan fitur pencarian di halaman utama untuk menemukan buku berdasarkan judul, penulis, atau kategori.
+        </div>
+      </div>
+    </div>
+    
+    <!-- Item 4 -->
+    <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
+      <h2 class="accordion-header" id="faq4-heading">
+        <button class="accordion-button collapsed fw-semibold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+          <i class="bi bi-key me-2 text-primary"></i> Bagaimana jika saya lupa password?
+        </button>
+      </h2>
+      <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faq4-heading" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Klik "Lupa Password" pada halaman login dan ikuti instruksi untuk mengatur ulang password Anda.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tentang Kami -->
+<section class="container my-5" id="tentang-kami">
+  <div class="row align-items-center justify-content-center">
+    <!-- Teks -->
+    <div class="col-12 col-md-6 mb-4 mb-md-0">
+      <h1 class="fw-bold text-center text-md-start mb-3">Tentang Kami</h1>
+      <p class="lead text-center text-md-start">
+        <strong>Akira</strong> adalah platform digital yang dirancang untuk memudahkan siapa saja dalam menjelajahi dunia literasi. Kami menyediakan akses ke ribuan buku dari berbagai genre—mulai dari fiksi, nonfiksi, edukasi, hingga referensi teknologi terkini.Akira hadir untuk mendukung kebiasaan membaca masyarakat Indonesia, khususnya pelajar dan generasi muda. Kami percaya bahwa membaca adalah langkah awal menuju perubahan besar.
+   </p>
+    </div>
+
+    <!-- Gambar -->
+    <div class="col-12 col-md-6 d-flex justify-content-center">
+      <img src="img/Untitled design.png" alt="Tentang Akira" class="img-fluid" style="max-width: 600px;">
+    </div>
+  </div>
+</section>
+
+
 <!-- Testimoni & Feedback Section -->
-<section class="container my-5 py-4">
+<section class="container my-5 py-4" id="testimoni-feedback">
   <div class="row">
     <!-- Testimoni -->
     <div class="col-lg-6 mb-4 mb-lg-0">
@@ -326,90 +410,8 @@
 </section>
 
 
-<!-- Tentang Kami -->
-<section class="container my-5">
-  <div class="row align-items-center justify-content-center">
-    <!-- Teks -->
-    <div class="col-12 col-md-6 mb-4 mb-md-0">
-      <h1 class="fw-bold text-center text-md-start mb-3">Tentang Kami</h1>
-      <p class="lead text-center text-md-start">
-        <strong>Akira</strong> adalah platform digital yang dirancang untuk memudahkan siapa saja dalam menjelajahi dunia literasi. Kami menyediakan akses ke ribuan buku dari berbagai genre—mulai dari fiksi, nonfiksi, edukasi, hingga referensi teknologi terkini.Akira hadir untuk mendukung kebiasaan membaca masyarakat Indonesia, khususnya pelajar dan generasi muda. Kami percaya bahwa membaca adalah langkah awal menuju perubahan besar.
-   </p>
-    </div>
-
-    <!-- Gambar -->
-    <div class="col-12 col-md-6 d-flex justify-content-center">
-      <img src="../img/Untitled design.png" alt="Tentang Akira" class="img-fluid" style="max-width: 600px;">
-    </div>
-  </div>
-</section>
-
-
-<!-- FAQ Section -->
-<section class="container my-5 py-4">
-  <h2 class="text-center mb-5 fw-bold text-dark">FAQ (Pertanyaan yang Sering Diajukan)</h2>
-  
-  <div class="accordion" id="faqAccordion">
-    <!-- Item 1 -->
-    <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
-      <h2 class="accordion-header" id="faq1-heading">
-        <button class="accordion-button fw-semibold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
-          <i class="bi bi-question-circle me-2 text-primary"></i> Bagaimana cara mendaftar di Akira?
-        </button>
-      </h2>
-      <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="faq1-heading" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
-          Klik tombol "Daftar" di pojok kanan atas, lalu isi formulir pendaftaran dengan data yang diperlukan.
-        </div>
-      </div>
-    </div>
-    
-    <!-- Item 2 -->
-    <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
-      <h2 class="accordion-header" id="faq2-heading">
-        <button class="accordion-button collapsed fw-semibold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
-          <i class="bi bi-book me-2 text-primary"></i> Apakah saya bisa membaca buku secara gratis?
-        </button>
-      </h2>
-      <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq2-heading" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
-          Beberapa buku tersedia gratis, namun ada juga buku premium yang memerlukan langganan.
-        </div>
-      </div>
-    </div>
-    
-    <!-- Item 3 -->
-    <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
-      <h2 class="accordion-header" id="faq3-heading">
-        <button class="accordion-button collapsed fw-semibold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
-          <i class="bi bi-search me-2 text-primary"></i> Bagaimana cara mencari buku tertentu?
-        </button>
-      </h2>
-      <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq3-heading" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
-          Gunakan fitur pencarian di halaman utama untuk menemukan buku berdasarkan judul, penulis, atau kategori.
-        </div>
-      </div>
-    </div>
-    
-    <!-- Item 4 -->
-    <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
-      <h2 class="accordion-header" id="faq4-heading">
-        <button class="accordion-button collapsed fw-semibold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
-          <i class="bi bi-key me-2 text-primary"></i> Bagaimana jika saya lupa password?
-        </button>
-      </h2>
-      <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faq4-heading" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
-          Klik "Lupa Password" pada halaman login dan ikuti instruksi untuk mengatur ulang password Anda.
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
   <!-- Contact -->
-  <section class="container my-5 text-center">
+  <section class="container my-5 text-center" id="kontak-kami">
     <div class="row justify-content-center align-items-center">
       <div class="col-12 col-md-6 text-start mb-4 mb-md-0">
         <h1 class="fw-bold">Kontak Kami</h1>
@@ -421,7 +423,7 @@
         <a href="https://wa.me/6281234567890" target="_blank" class="btn" style="background-color: #3F72AF; color: white;">Kontak Melalui WhatsApp</a>
       </div>
       <div class="col-12 col-md-6 d-flex justify-content-center">
-        <img src="../img/section kontak.png" alt="Kontak" class="img-fluid">
+        <img src="img/section kontak.png" alt="Kontak" class="img-fluid">
       </div>
     </div>
   </section>
@@ -434,7 +436,7 @@
           
           <!-- Column 1 -->
           <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 ">
-            <img src="../img/Modern Public Book Library Logo.png" class="w-50 mb-3" alt="">
+            <img src="img/Modern Public Book Library Logo.png" class="w-50 mb-3" alt="">
             <p class="fw-light fs-5 mb-2">Akira Website adalah platform digital modern untuk pencinta literasi.</p>
             <ul class="list-unstyled d-flex" style="color: #9c9c9c;">
               <li class="list-inline-item"><i class="fas fa-map-marker-alt pe-2"></i>Bojonegoro, Jawa Timur, Indonesia</li>
@@ -445,13 +447,13 @@
           <div class="col-md-2 col-lg-2 col-xl-3 mx-auto mt-3 ps-2 ps-mb-5 ps-lg-5">
             <h5 class="text-uppercase mb-4 font-weight-bold">Navigasi</h5>
             <p>
-                <a href="#donut-vanilla" style="text-decoration: none;">Kategori</a>
+                <a href="#buku-terpopuler" style="text-decoration: none;">Buku Terpopuler</a>
             </p>
             <p>
-                <a href="#donut-macha" style="text-decoration: none;">Semua Buku</a>
+                <a href="#semua_buku" style="text-decoration: none;">Semua Buku</a>
             </p>
             <p>
-                <a href="#promo" style="text-decoration: none;">Rekomendasi</a>
+                <a href="#rekomendasi-buku" style="text-decoration: none;">Rekomendasi</a>
             </p>
           </div>
     
@@ -459,13 +461,13 @@
           <div class="col-md-3 col-lg-2 col-xl-3 mx-auto mt-3 ps-2 ps-mb-5 ps-lg-5">
             <h5 class="text-uppercase mb-4 font-weight-bold">Tentang</h5>
             <p>
-                <a href="https://web.whatsapp.com/" style="text-decoration: none;">Tentang Kami</a>
+                <a href="#tentang-kami" style="text-decoration: none;">Tentang Kami</a>
             </p>
             <p>
-                <a href="https://www.instagram.com/" style="text-decoration: none;">Beranda</a>
+                <a href="#beranda" style="text-decoration: none;">Beranda</a>
             </p>
             <p>
-                <a href="https://www.instagram.com/" style="text-decoration: none;">Kenapa Harus Kami?</a>
+                <a href="#kenapa-akira" style="text-decoration: none;">Kenapa Harus Kami?</a>
             </p>
           </div>
     
@@ -473,13 +475,13 @@
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 ps-2 ps-mb-5 ps-lg-5">
             <h5 class="text-uppercase mb-4 font-weight-bold">Support</h5>
             <p>
-                <a href="https://maps.app.goo.gl/7NjfnrsSfn9WKX6P6" style="text-decoration: none;"> FAQ</a>
+                <a href="#faq" style="text-decoration: none;"> FAQ</a>
             </p>
             <p>
-                <a href="https://mail.google.com/" style="text-decoration: none;"> Kontak</a>
+                <a href="#kontak-kami" style="text-decoration: none;"> Kontak</a>
             </p>
             <p>
-                <a href="#" style="text-decoration: none;"> Testimoni</a>
+                <a href="#testimoni-feedback" style="text-decoration: none;"> Testimoni</a>
             </p>
           </div>
             <hr>
