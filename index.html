@@ -48,8 +48,8 @@
 
       <!-- Tombol Login & Register -->
       <div class="d-flex mb-2 mt-2">
-        <a href="/AI ( ChatBoot)/Auth/login.html" class="btn btn-outline-light me-2">Masuk</a>
-        <a href="/AI ( ChatBoot)/Auth/register.html" class="btn btn-light text-dark">Daftar</a>
+        <a href="Auth/login.html" class="btn btn-outline-light me-2">Masuk</a>
+        <a href="Auth/register.html" class="btn btn-light text-dark">Daftar</a>
       </div>
     </div>
   </div>
@@ -57,15 +57,36 @@
 <!-- End Navbar -->
 
 
-  <!-- Hero Section -->
-  <section class="Hero min-vh-100 d-flex flex-column justify-content-center align-items-center p-5 bg-light" id="beranda">
-    <h1>Temukan Buku Favoritmu di Akira</h1>
-    <p class="lead">Jelajahi ribuan buku dari berbagai genre dan penulis.</p>
-    <form class="d-flex justify-content-center" role="search">
-      <input class="form-control w-50" type="search" placeholder="Cari buku, penulis, kategori..." aria-label="Search" />
-      <button class="btn btn-primary ms-2" type="submit">Jelajahi Koleksi</button>
-    </form>
-  </section>
+<!-- Hero Section  -->
+<section class="Hero min-vh-100 d-flex flex-column justify-content-center align-items-center p-5" id="beranda">
+  <div class="text-center mb-5">
+    <h1 class="display-3 fw-bold text-dark mb-4" style="letter-spacing: 0.5px;">
+      Temukan Buku <span class="text-primary">Favoritmu</span> di Akira
+    </h1>
+    <p class="lead fs-4 text-secondary mb-5" style=" line-height: 1.6;">
+      Jelajahi ribuan buku dari berbagai genre dan penulis terbaik dalam genggaman Anda
+    </p>
+  </div>
+
+  <form class="d-flex flex-column w-100 align-items-center" role="search" style="max-width: 700px;">
+    <div class="input-group input-group-lg shadow rounded-pill overflow-hidden mb-3" style="width: 100%; border: 1px solid #dee2e6;">
+      <span class="input-group-text bg-white border-0 ps-4">
+        <i class="bi bi-search text-muted"></i>
+      </span>
+      <input 
+        class="form-control border-0 py-3 fs-5" 
+        type="search" 
+        placeholder="Cari buku, penulis, atau kategori..." 
+        aria-label="Search"
+        style="background-color: #f8f9fa;"
+      >
+      <button class="btn btn-primary px-4 fs-5 fw-semibold" type="submit" style="border-top-right-radius: 50rem; border-bottom-right-radius: 50rem;">
+        <i class="bi bi-search me-2"></i> Cari
+      </button>
+    </div>
+    <small class="text-muted mt-2">Contoh: Novel, Sastra, Teknologi, atau nama penulis</small>
+  </form>
+</section>
 
   <!-- Kategori Buku Populer -->
   <section class="container my-5" id="kategori-buku">
@@ -174,125 +195,118 @@
 
 
 
-<!-- Kenapa Harus Akira -->
-<section class="container my-5 py-4" id="kenapa-akira">
-  <div class="row align-items-center justify-content-center g-4">
-    <div class="col-12 col-lg-6 mb-4 mb-lg-0 d-flex justify-content-center">
-      <img src="img/kenapaAkira.png" alt="Ilustrasi Membaca" class="img-fluid rounded-4 shadow" style="max-width:400px;">
-    </div>
-    <div class="col-12 col-lg-6">
-      <div class="ps-lg-4">
-        <h2 class="display-5 fw-bold text-primary mb-4 text-center text-lg-start">Kenapa Harus Memilih Akira?</h2>
-        
-        <div class="d-flex align-items-start mb-4">
-          <div class="me-3 text-primary">
-            <i class="bi bi-book fs-3"></i>
+<!-- Kenapa Harus Akira Section -->
+<section class="m-2 m-md-3 m-lg-3 ms-2 ms-md-3 ms-lg-4 me-2 me-md-3 me-lg-4 mb-2 mb-md-3 mb-lg-5 p-5 rounded-5 shadow-lg" id="kenapa-akira" style="background-color: #3F72AF;">
+  
+
+    <div class="row align-items-center g-4 g-lg-5">
+      <!-- Image Column -->
+      <div class="col-lg-6 d-flex justify-content-center">
+        <img src="img/kenapaAkira.png" alt="Ilustrasi Membaca" class="img-fluid w-75">
+      </div>
+      
+      <!-- Content Column -->
+      <div class="col-lg-6">
+        <div class="ps-lg-4">
+          <h2 class="display-4 fw-bold text-white mb-2 text-center text-lg-start">Kenapa Harus Memilih Akira?</h2>
+          <div class="border-bottom border-white mb-4 border-5 " style="width: 220px;"></div>
+          
+          <!-- Feature 1 -->
+          <div class="d-flex align-items-start mb-4 p-3 bg-white bg-opacity-10 rounded-4">
+            <div class="me-3 text-white">
+              <i class="bi bi-book fs-2"></i>
+            </div>
+            <div>
+              <h4 class="fw-bold text-white">Koleksi Buku Terlengkap</h4>
+              <p class="mb-0 text-light">Ribuan judul buku dari berbagai genre siap memenuhi kebutuhan literasi Anda, dari fiksi hingga akademik.</p>
+            </div>
           </div>
-          <div>
-            <h4 class="fw-semibold">Koleksi Buku Terlengkap</h4>
-            <p class="mb-0 text-muted">Ribuan judul buku dari berbagai genre siap memenuhi kebutuhan literasi Anda, dari fiksi hingga akademik.</p>
+          
+          <!-- Feature 2 -->
+          <div class="d-flex align-items-start mb-4 p-3 bg-white bg-opacity-10 rounded-4">
+            <div class="me-3 text-white">
+              <i class="bi bi-star fs-2"></i>
+            </div>
+            <div>
+              <h4 class="fw-bold text-white">Review & Rating Terpercaya</h4>
+              <p class="mb-0 text-light">Dapatkan insight dari komunitas pembaca sebelum memilih buku melalui ulasan jujur dan rating akurat.</p>
+            </div>
           </div>
-        </div>
-        
-        <div class="d-flex align-items-start mb-4">
-          <div class="me-3 text-primary">
-            <i class="bi bi-star fs-3"></i>
+          
+          <!-- Feature 3 -->
+          <div class="d-flex align-items-start mb-4 p-3 bg-white bg-opacity-10 rounded-4">
+            <div class="me-3 text-white">
+              <i class="bi bi-bookmark fs-2"></i>
+            </div>
+            <div>
+              <h4 class="fw-bold text-white">Manajemen Bacaan Cerdas</h4>
+              <p class="mb-0 text-light">Bookmark halaman favorit, buat daftar bacaan pribadi, dan lacak progres membaca dengan fitur khusus kami.</p>
+            </div>
           </div>
-          <div>
-            <h4 class="fw-semibold">Review & Rating Terpercaya</h4>
-            <p class="mb-0 text-muted">Dapatkan insight dari komunitas pembaca sebelum memilih buku melalui ulasan jujur dan rating akurat.</p>
-          </div>
-        </div>
-        
-        <div class="d-flex align-items-start mb-4">
-          <div class="me-3 text-primary">
-            <i class="bi bi-bookmark fs-3"></i>
-          </div>
-          <div>
-            <h4 class="fw-semibold">Manajemen Bacaan Cerdas</h4>
-            <p class="mb-0 text-muted">Bookmark halaman favorit, buat daftar bacaan pribadi, dan lacak progres membaca dengan fitur khusus kami.</p>
-          </div>
-        </div>
-        
-        <div class="d-flex align-items-start">
-          <div class="me-3 text-primary">
-            <i class="bi bi-people fs-3"></i>
-          </div>
-          <div>
-            <h4 class="fw-semibold">Komunitas Pembaca Aktif</h4>
-            <p class="mb-0 text-muted">Bergabunglah dengan ribuan anggota komunitas untuk berdiskusi, berbagi rekomendasi, dan event literasi eksklusif.</p>
-          </div>
-        </div>
-        
-        <div class="mt-4 text-center text-lg-start">
-          <a href="#" class="btn btn-primary btn-lg px-4 me-2">
-            <i class="bi bi-book me-2"></i> Jelajahi Koleksi
-          </a>
-          <a href="#" class="btn btn-outline-primary btn-lg px-4">
-            <i class="bi bi-people-fill me-2"></i> Gabung Komunitas
-          </a>
+          
         </div>
       </div>
+
     </div>
-  </div>
+
 </section>
 
 <!-- FAQ Section -->
-<section class="container my-5 py-4" id="faq">
-  <h2 class="text-center mb-5 fw-bold text-dark">FAQ (Pertanyaan yang Sering Diajukan)</h2>
+<section class="m-2 m-md-3 m-lg-3 ms-2 ms-md-3 ms-lg-4 me-2 me-md-3 me-lg-4 mb-2 mb-md-3 mb-lg-5 p-5" id="faq">
+    <h2 class="display-5 fw-bold mb-5 text-center" style="color: #3F72AF; ">FAQ (Pertanyaan yang Sering Diajukan)</h2>
   
   <div class="accordion" id="faqAccordion">
     <!-- Item 1 -->
-    <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
+    <div class="accordion-item mb-4 border rounded-4 overflow-hidden shadow-sm">
       <h2 class="accordion-header" id="faq1-heading">
-        <button class="accordion-button fw-semibold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
-          <i class="bi bi-question-circle me-2 text-primary"></i> Bagaimana cara mendaftar di Akira?
+        <button class="accordion-button fw-semibold text-dark py-3 fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1" >
+          <i class="bi bi-question-circle me-3 text-primary fs-4"></i> Bagaimana cara mendaftar di Akira?
         </button>
       </h2>
       <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="faq1-heading" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
+        <div class="accordion-body fs-5 py-3">
           Klik tombol "Daftar" di pojok kanan atas, lalu isi formulir pendaftaran dengan data yang diperlukan.
         </div>
       </div>
     </div>
     
     <!-- Item 2 -->
-    <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
+    <div class="accordion-item mb-4 border rounded-4 overflow-hidden shadow-sm">
       <h2 class="accordion-header" id="faq2-heading">
-        <button class="accordion-button collapsed fw-semibold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
-          <i class="bi bi-book me-2 text-primary"></i> Apakah saya bisa membaca buku secara gratis?
+        <button class="accordion-button collapsed fw-semibold text-dark py-3 fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+          <i class="bi bi-book me-3 text-primary fs-4"></i> Apakah saya bisa membaca buku secara gratis?
         </button>
       </h2>
       <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq2-heading" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
+        <div class="accordion-body fs-5 py-3">
           Beberapa buku tersedia gratis, namun ada juga buku premium yang memerlukan langganan.
         </div>
       </div>
     </div>
     
     <!-- Item 3 -->
-    <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
+    <div class="accordion-item mb-4 border rounded-4 overflow-hidden shadow-sm">
       <h2 class="accordion-header" id="faq3-heading">
-        <button class="accordion-button collapsed fw-semibold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
-          <i class="bi bi-search me-2 text-primary"></i> Bagaimana cara mencari buku tertentu?
+        <button class="accordion-button collapsed fw-semibold text-dark py-3 fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+          <i class="bi bi-search me-3 text-primary fs-4"></i> Bagaimana cara mencari buku tertentu?
         </button>
       </h2>
       <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq3-heading" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
+        <div class="accordion-body fs-5 py-3">
           Gunakan fitur pencarian di halaman utama untuk menemukan buku berdasarkan judul, penulis, atau kategori.
         </div>
       </div>
     </div>
     
     <!-- Item 4 -->
-    <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
+    <div class="accordion-item mb-4 border rounded-4 overflow-hidden shadow-sm">
       <h2 class="accordion-header" id="faq4-heading">
-        <button class="accordion-button collapsed fw-semibold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
-          <i class="bi bi-key me-2 text-primary"></i> Bagaimana jika saya lupa password?
+        <button class="accordion-button collapsed fw-semibold text-dark py-3 fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+          <i class="bi bi-key me-3 text-primary fs-4"></i> Bagaimana jika saya lupa password?
         </button>
       </h2>
       <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faq4-heading" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
+        <div class="accordion-body fs-5 py-3">
           Klik "Lupa Password" pada halaman login dan ikuti instruksi untuk mengatur ulang password Anda.
         </div>
       </div>
@@ -300,66 +314,153 @@
   </div>
 </section>
 
-<!-- Tentang Kami -->
-<section class="container my-5" id="tentang-kami">
-  <div class="row align-items-center justify-content-center">
-    <!-- Teks -->
-    <div class="col-12 col-md-6 mb-4 mb-md-0">
-      <h1 class="fw-bold text-center text-md-start mb-3">Tentang Kami</h1>
-      <p class="lead text-center text-md-start">
-        <strong>Akira</strong> adalah platform digital yang dirancang untuk memudahkan siapa saja dalam menjelajahi dunia literasi. Kami menyediakan akses ke ribuan buku dari berbagai genre—mulai dari fiksi, nonfiksi, edukasi, hingga referensi teknologi terkini.Akira hadir untuk mendukung kebiasaan membaca masyarakat Indonesia, khususnya pelajar dan generasi muda. Kami percaya bahwa membaca adalah langkah awal menuju perubahan besar.
-   </p>
-    </div>
+<!-- Tentang Kami Section -->
+<section class="bg-light" id="tentang-kami">
+  <div class="m-2 m-md-3 m-lg-3 ms-2 ms-md-3 ms-lg-4 me-2 me-md-3 me-lg-4 mb-2 mb-md-3 mb-lg-5 p-5">
+    <div class="row align-items-center g-5">
+      <!-- Teks -->
+      <div class="col-lg-6">
+        <div class="pe-lg-5">
+          <h1 class="display-4 fw-bold mb-4 text-primary" style="color: #3F72AF !important;">
+            Tentang Kami
+            <div class="border-bottom border-primary border-3 my-3" style="width: 120px;"></div>
+          </h1>
+          <p class="fw-normal fs-5 mb-4 text-dark">
+            <span class="fw-bold" style="color: #3F72AF;">Akira</span> adalah platform digital yang dirancang untuk memudahkan siapa saja dalam menjelajahi dunia literasi.
+          </p>
+          <p class="fs-5">
+            Kami menyediakan akses ke ribuan buku dari berbagai genre—mulai dari fiksi, nonfiksi, edukasi, hingga referensi teknologi terkini. Akira hadir untuk mendukung kebiasaan membaca masyarakat Indonesia, khususnya pelajar dan generasi muda. Kami percaya bahwa membaca adalah langkah awal menuju perubahan besar.
+          </p>
+          <button class="btn d-flex align-items-center mt-4 p-3 rounded-pill shadow" style="background-color: #3F72AF;">
+            <i class="bi bi-book fs-3 me-3 text-primary" style="color: #ffffff !important;"></i>
+            <span class="fs-5 fw-semibold text-white">Temukan dunia literasi tanpa batas</span>
+          </button>
+        </div>
+      </div>
 
-    <!-- Gambar -->
-    <div class="col-12 col-md-6 d-flex justify-content-center">
-      <img src="img/Untitled design.png" alt="Tentang Akira" class="img-fluid" style="max-width: 600px;">
+      <!-- Gambar -->
+<div class="col-lg-6">
+  <div class="position-relative d-flex justify-content-center justify-content-lg-end">
+    <div class="position-relative" style="max-width: 500px;">
+      <img src="img/Untitled design.png" alt="Tentang Akira" class="img-fluid rounded-4 shadow-lg" style="border: 4px solid white; transform: rotate(-3deg);">
+      
+      <!-- Decorative element 1 -->
+      <div class="position-absolute top-0 start-0 translate-middle">
+        <div class="bg-primary p-3 rounded-circle shadow" style="background-color: #3F72AF !important; opacity: 0.9;">
+          <i class="bi bi-bookmark-star-fill fs-4 text-white"></i>
+        </div>
+      </div>
+      
+      <!-- Decorative element 2 -->
+      <div class="position-absolute bottom-0 end-0 translate-middle">
+        <div class="bg-primary p-3 rounded-circle shadow" style="background-color: #3F72AF !important; opacity: 0.9;">
+          <i class="bi bi-heart-fill fs-4 text-white"></i>
+        </div>
+      </div>
+      
+      <!-- Optional: Floating book elements -->
+      <div class="position-absolute bottom-0 start-0" style="transform: translate(-30%, 30%) rotate(-15deg); z-index: -1;">
+        <div class="bg-white p-2 rounded shadow-sm" style="width: 80px; height: 100px;">
+          <div class="h-100 w-100 border border-2 border-primary rounded"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
   </div>
 </section>
 
 
 <!-- Testimoni & Feedback Section -->
-<section class="container my-5 py-4" id="testimoni-feedback">
-  <div class="row">
+<section class="m-2 m-md-3 m-lg-3 ms-2 ms-md-3 ms-lg-4 me-2 me-md-3 me-lg-4 mb-2 mb-md-3 mb-lg-5 p-5" id="testimoni-feedback">
+  <div class="row g-4">
     <!-- Testimoni -->
-    <div class="col-lg-6 mb-4 mb-lg-0">
-      <h2 class="fw-bold mb-4 text-primary">Testimoni Pengguna</h2>
+    <div class="col-lg-6">
+      <div class="mb-5">
+        <div class="d-flex align-items-center mb-3">
+          <i class="bi bi-chat-square-quote fs-1 me-3" style="color: #3F72AF;"></i>
+          <h2 class="mb-0 fw-bold" style="color: #3F72AF;">Apa Kata Mereka?</h2>
+        </div>
+        <hr class="border-5 border-primary opacity-75" style="width: 200px;">
+      </div>
       
-      <div class="card border-0 shadow-sm h-100">
+      <div class="card border-0 shadow">
         <div class="card-body p-4">
-          <div class="d-flex align-items-center mb-3">
-            <i class="bi bi-chat-square-quote fs-1 text-primary me-3"></i>
-            <h3 class="mb-0">Apa Kata Mereka?</h3>
-          </div>
-          
-          <div id="testimoniCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
+          <!-- Testimonial 1 -->
+          <div id="testimoniCarousel1" class="carousel slide mb-4" data-bs-ride="carousel">
+            <div class="carousel-inner bg-light p-4 rounded-3" style="border-left: 4px solid #3F72AF;">
               <div class="carousel-item active">
-                <blockquote class="blockquote">
-                  <p class="fs-5 mb-3">"Akira membantu saya menemukan banyak buku inspiratif dengan mudah!"</p>
-                  <footer class="blockquote-footer">Dewi, pembaca aktif</footer>
+                <blockquote class="blockquote mb-0">
+                  <p class="fs-5 mb-3 text-dark">"Akira membantu saya menemukan banyak buku inspiratif dengan mudah!"</p>
+                  <footer class="blockquote-footer text-muted">Dewi, pembaca aktif</footer>
                 </blockquote>
               </div>
               <div class="carousel-item">
-                <blockquote class="blockquote">
-                  <p class="fs-5 mb-3">"Antarmuka yang sederhana tapi powerful, sangat memudahkan pencarian buku."</p>
-                  <footer class="blockquote-footer">Rudi, mahasiswa</footer>
-                </blockquote>
-              </div>
-              <div class="carousel-item">
-                <blockquote class="blockquote">
-                  <p class="fs-5 mb-3">"Koleksi bukunya lengkap dan sistem rekomendasinya tepat!"</p>
-                  <footer class="blockquote-footer">Budi, penulis</footer>
+                <blockquote class="blockquote mb-0">
+                  <p class="fs-5 mb-3 text-dark">"Antarmuka yang sederhana tapi powerful, sangat memudahkan pencarian buku."</p>
+                  <footer class="blockquote-footer text-muted">Rudi, mahasiswa</footer>
                 </blockquote>
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#testimoniCarousel" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimoniCarousel1" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#testimoniCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimoniCarousel1" data-bs-slide="next">
+              <span class="carousel-control-next-icon " aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div id="testimoniCarousel2" class="carousel slide mb-4" data-bs-ride="carousel">
+            <div class="carousel-inner bg-light p-4 rounded-3" style="border-left: 4px solid #3F72AF;">
+              <div class="carousel-item active">
+                <blockquote class="blockquote mb-0">
+                  <p class="fs-5 mb-3 text-dark">"Platform yang sangat mendukung penulis lokal untuk dikenal lebih luas."</p>
+                  <footer class="blockquote-footer text-muted">Budi, penulis</footer>
+                </blockquote>
+              </div>
+              <div class="carousel-item">
+                <blockquote class="blockquote mb-0">
+                  <p class="fs-5 mb-3 text-dark">"Sistem royalti yang transparan dan pembayaran tepat waktu."</p>
+                  <footer class="blockquote-footer text-muted">Ani, penulis novel</footer>
+                </blockquote>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimoniCarousel2" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimoniCarousel2" data-bs-slide="next">
+              <span class="carousel-control-next-icon " aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+          <!-- Testimonial 3 -->
+           <div id="testimoniCarousel3" class="carousel slide mb-4" data-bs-ride="carousel">
+            <div class="carousel-inner bg-light p-4 rounded-3" style="border-left: 4px solid #3F72AF;">
+              <div class="carousel-item active">
+                <blockquote class="blockquote mb-0">
+                  <p class="fs-5 mb-3 text-dark">"Sistem royalti yang transparan dan pembayaran tepat waktu.""</p>
+                  <footer class="blockquote-footer text-muted">Budi, penulis</footer>
+                </blockquote>
+              </div>
+              <div class="carousel-item">
+                <blockquote class="blockquote mb-0">
+                  <p class="fs-5 mb-3 text-dark">"Platform yang sangat mendukung penulis lokal untuk dikenal lebih luas.</p>
+                  <footer class="blockquote-footer text-muted">Ani, penulis novel</footer>
+                </blockquote>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimoniCarousel3" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimoniCarousel3" data-bs-slide="next">
+              <span class="carousel-control-next-icon " aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
           </div>
@@ -369,36 +470,31 @@
     
     <!-- Feedback Form -->
     <div class="col-lg-6">
-      <h2 class="fw-bold mb-4 text-primary">Kirim Feedback Anda</h2>
+      <div class="mb-5">
+        <div class="d-flex align-items-center mb-3 justify-content-start">
+          <i class="bi bi-envelope-paper fs-1 me-3" style="color: #3F72AF;"></i>
+          <h2 class="mb-0 fw-bold" style="color: #3F72AF;">Kirim Feedback Anda</h2>
+        </div>
+        <hr class="border-5 border-primary opacity-75 " style="width: 200px;">
+      </div>
       
-      <div class="card border-0 shadow-sm h-100">
+      <div class="card border-0 shadow ">
         <div class="card-body p-4">
           <form id="feedbackForm">
             <div class="mb-3">
-              <label for="name" class="form-label">Nama</label>
-              <input type="text" class="form-control" id="name" placeholder="Nama Anda" required>
+              <label for="name" class="form-label fw-semibold" style="color: #3F72AF;">Nama :</label>
+              <input type="text" class="form-control border-2 py-2" id="name" placeholder="Nama Anda" required style="border-color: #3F72AF;">
             </div>
             <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="email@contoh.com" required>
+              <label for="email" class="form-label fw-semibold" style="color: #3F72AF;">Email :</label>
+              <input type="email" class="form-control border-2 py-2" id="email" placeholder="email@contoh.com" required style="border-color: #3F72AF;">
             </div>
             <div class="mb-3">
-              <label for="rating" class="form-label">Rating</label>
-              <select class="form-select" id="rating" required>
-                <option value="" selected disabled>Pilih rating</option>
-                <option value="5">⭐ ⭐ ⭐ ⭐ ⭐ (Sangat Puas)</option>
-                <option value="4">⭐ ⭐ ⭐ ⭐ (Puas)</option>
-                <option value="3">⭐ ⭐ ⭐ (Cukup)</option>
-                <option value="2">⭐ ⭐ (Kurang Puas)</option>
-                <option value="1">⭐ (Tidak Puas)</option>
-              </select>
+              <label for="message" class="form-label fw-semibold" style="color: #3F72AF;">Pesan Anda :</label>
+              <textarea class="form-control border-2" id="message" rows="4" placeholder="Tulis feedback Anda di sini..." required style="border-color: #3F72AF;"></textarea>
             </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">Pesan Anda</label>
-              <textarea class="form-control" id="message" rows="4" placeholder="Tulis feedback Anda di sini..." required></textarea>
-            </div>
-            <div class="d-grid">
-              <button type="submit" class="btn btn-primary py-2">
+            <div class="d-grid mt-4">
+              <button type="submit" class="btn py-3 fw-bold fs-5 text-white" style="background-color: #3F72AF;">
                 <i class="bi bi-send-fill me-2"></i> Kirim Feedback
               </button>
             </div>
@@ -411,19 +507,21 @@
 
 
   <!-- Contact -->
-  <section class="container my-5 text-center" id="kontak-kami">
-    <div class="row justify-content-center align-items-center">
+  <section class="m-2 m-md-3 m-lg-3 ms-2 ms-md-3 ms-lg-4 me-2 me-md-3 me-lg-4 mb-2 mb-md-3 mb-lg-4 p-5 text-center" id="kontak-kami">
+    <div class="row justify-content-center align-items-center ">
       <div class="col-12 col-md-6 text-start mb-4 mb-md-0">
-        <h1 class="fw-bold">Kontak Kami</h1>
-        <p class="lead">
+        <h1 class="fw-bold mb-3" style="color: #3F72AF;">Kontak Kami</h1>
+        <p class="fw-normal fs-5">
           Kami di <strong>Akira Website</strong> selalu siap membantu Anda. Jika Anda memiliki pertanyaan seputar penggunaan platform, kendala teknis, permintaan informasi, atau ingin memberikan masukan dan saran, tim kami dengan senang hati akan mendengarkan dan memberikan solusi terbaik. <br><br>
           
           Layanan pelanggan tersedia setiap <strong>Senin – Jumat</strong>, pukul <strong>08.00 – 17.00 WIB</strong>. Di luar jam tersebut, Anda tetap dapat mengirim pesan dan kami akan membalasnya pada hari kerja berikutnya.
         </p>
-        <a href="https://wa.me/6281234567890" target="_blank" class="btn" style="background-color: #3F72AF; color: white;">Kontak Melalui WhatsApp</a>
+                  <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-lg rounded-pill p-3 shadow-sm" style="background-color: #3F72AF; color: white;">
+                <i class="bi bi-whatsapp me-2"></i> Kontak Melalui WhatsApp
+            </a>
       </div>
-      <div class="col-12 col-md-6 d-flex justify-content-center">
-        <img src="img/section kontak.png" alt="Kontak" class="img-fluid">
+      <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+        <img src="img/section kontak.png" alt="Kontak" class="img-fluid w-100">
       </div>
     </div>
   </section>
@@ -514,6 +612,43 @@
         </div>
       </div>
     </footer>
+
+<!-- tombol cari dan chatbooth -->
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1000;">
+  <!-- Search Button (Green) -->
+  <a href="#beranda" class="d-flex align-items-center justify-content-center mb-2" 
+     data-bs-toggle="modal" data-bs-target="#searchModal"
+     style="width: 60px; height: 60px; background-color:#112D4E ;  border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.2); text-decoration: none; transition: transform 0.2s;">
+    <i class="bi bi-search fs-4 text-white"></i>
+  </a>
+
+  <!-- Book Button (Original Blue) -->
+  <a href="#" class="d-flex align-items-center justify-content-center" 
+     data-bs-toggle="modal" data-bs-target="#contactFormModal"
+     style="width: 60px; height: 60px; background-color: #3F72AF; border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.2); text-decoration: none; transition: transform 0.2s;">
+    <i class="bi bi-book-half fs-4 text-white"></i>
+  </a>
+</div>
+
+<!-- Search Modal -->
+<div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <div class="input-group">
+          <input type="text" class="form-control py-2" placeholder="Cari buku, penulis, atau kategori..." aria-label="Search">
+          <button class="btn text-white" type="button" style="background-color:#112D4E ; ">
+            <i class="bi bi-search"></i> Cari
+          </button>
+        </div>
+        <button type="button" class="btn-close ms-2" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 
     <!-- Bootstrap Icons CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
