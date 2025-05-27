@@ -617,35 +617,22 @@
 <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1000;">
   <!-- Search Button (Green) -->
   <a href="#beranda" class="d-flex align-items-center justify-content-center mb-2" 
-     data-bs-toggle="modal" data-bs-target="#searchModal"
-     style="width: 60px; height: 60px; background-color:#112D4E ;  border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.2); text-decoration: none; transition: transform 0.2s;">
-    <i class="bi bi-search fs-4 text-white"></i>
+     style="width: 60px; height: 60px; background-color:#112D4E ;  border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.2); text-decoration: none; transition: transform 0.2s;"
+     data-bs-toggle="tooltip" data-bs-placement="top" title="Cari Buku">
+     <i class="bi bi-search fs-4 text-white"></i>
   </a>
 
   <!-- Book Button (Original Blue) -->
-  <a href="#" class="d-flex align-items-center justify-content-center" 
-     data-bs-toggle="modal" data-bs-target="#contactFormModal"
-     style="width: 60px; height: 60px; background-color: #3F72AF; border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.2); text-decoration: none; transition: transform 0.2s;">
-    <i class="bi bi-book-half fs-4 text-white"></i>
-  </a>
+<a href="AI ( ChatBoot)/Homepage/index.html" 
+   class="d-flex align-items-center justify-content-center"
+   style="width: 60px; height: 60px; background-color: #3F72AF; border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.2); text-decoration: none; transition: transform 0.2s;"
+   data-bs-toggle="tooltip" data-bs-placement="top" title="Cario Asisten Ai">
+   <img src="img/Simple C Letter Logo(white).png" class="w-50" alt="">
+</a>
+
 </div>
 
-<!-- Search Modal -->
-<div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header border-0">
-        <div class="input-group">
-          <input type="text" class="form-control py-2" placeholder="Cari buku, penulis, atau kategori..." aria-label="Search">
-          <button class="btn text-white" type="button" style="background-color:#112D4E ; ">
-            <i class="bi bi-search"></i> Cari
-          </button>
-        </div>
-        <button type="button" class="btn-close ms-2" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-    </div>
-  </div>
-</div>
+
 
 
 
@@ -656,6 +643,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+   const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+  const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+</script>
 
 </body>
 </html>
