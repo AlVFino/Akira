@@ -12,6 +12,12 @@
 </head>
 <body>
 
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="spinner"></div>
+        <div class="loading-text">Memuat Akira...</div>
+    </div>
+
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg  m-2 m-md-3 m-lg-3 ms-2 ms-md-3 ms-lg-5 me-2 me-md-3 me-lg-5 p-2 rounded-5 shadow fixed-top">
   <div class="container">
@@ -69,13 +75,13 @@
   </div>
 
   <!-- Form Pencarian -->
-  <form class="d-flex flex-column w-100 align-items-center" style="max-width: 700px;" onsubmit="searchBooks(event)">
+  <form id="search-form" class="d-flex flex-column w-100 align-items-center" style="max-width: 700px;" onsubmit="searchBooks(event)">
     <div class="input-group input-group-lg shadow rounded-pill overflow-hidden mb-3" style="width: 100%; border: 1px solid #dee2e6;">
       <span class="input-group-text bg-white border-0 ps-4">
         <i class="bi bi-search text-muted"></i>
       </span>
       <input 
-        id="searchInput"
+        id="search-input"
         class="form-control border-0 py-3 fs-5" 
         type="search" 
         placeholder="Cari buku, penulis, atau kategori..." 
@@ -83,7 +89,7 @@
         style="background-color: #f8f9fa;"
         required
       >
-      <button class="btn btn-primary px-4 fs-5 fw-semibold" type="submit">
+      <button id="search-button" class="btn btn-primary px-4 fs-5 fw-semibold" type="submit">
         <i class="bi bi-search me-2"></i> Cari
       </button>
     </div>
@@ -91,11 +97,11 @@
   </form>
 
   <!-- Hasil Pencarian -->
-  <div id="results" class="mt-5 w-100" style="max-width: 800px;"></div>
+  <!-- <div id="results" class="mt-5 w-100" style="max-width: 800px;"></div> -->
 </section>
 
   <!-- Kategori Buku -->
-<section class="container my-5" id="kategori-buku">
+<section class="m-2 m-md-3 m-lg-3 ms-2 ms-md-3 ms-lg-4 me-2 me-md-3 me-lg-4 mb-2 mb-md-3 mb-lg-5 p-5" id="kategori-buku">
   <h1 class="fw-bold display-6 mb-4" style="color: #3F72AF;">Kategori Buku</h1>
   <div class="border-bottom border-primary border-5 my-3" style="width: 120px;"></div>
   <div class="row g-3 mt-3" id="categories-container"></div>
@@ -109,30 +115,38 @@
 
 
   <!-- Semua Buku -->
-  <section class="container my-5" id="semua_buku">
+  <section class="m-2 m-md-3 m-lg-3 ms-2 ms-md-3 ms-lg-4 me-2 me-md-3 me-lg-4 mb-2 mb-md-3 mb-lg-5 p-5" id="semua_buku">
     <h1 class="fw-bold display-6 mb-4" style="color: #3F72AF;">Semua Buku</h1>
     <div class="border-bottom border-primary border-5 my-3" style="width: 120px;"></div>
-    <div class="row g-4 mt-3 " id="new-books-container"> 
+    <div class="row g-4 mt-3" id="new-books-container"> 
     </div>
+    <button id="load-more-new-books" class="btn btn-dark mt-3">
+      <span class="btn-text">Muat Lebih banyak</span>
+      <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+    </button>
   </section>
 
+
   <!-- Buku Terpopuler -->
-   <section id="buku_favorit" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="text-center mb-5">Buku Favorit Pembaca</h2>
-    <div class="row" id="favorite-books-container">
+<section id="buku_favorit" class="m-2 m-md-3 m-lg-3 ms-2 ms-md-3 ms-lg-4 me-2 me-md-3 me-lg-4 mb-2 mb-md-3 mb-lg-5 p-5 rounded-5 shadow bg-light">
+    <h2 class="text-center fw-bold display-5 mb-4" style="color: #3F72AF;">Buku Favorit Pembaca</h2>
+     <div class="border-bottom border-primary border-5 mx-auto " style="width: 320px;"></div>
+    <div class="row mt-5" id="favorite-books-container">
       <!-- Books will be loaded here -->
-    </div>
   </div>
 </section>
 
   <!-- Rekomendasi untukmu -->
-  <section class="container my-5" id="rekomendasi-buku">
+  <section class="m-2 m-md-3 m-lg-3 ms-2 ms-md-3 ms-lg-4 me-2 me-md-3 me-lg-4 mb-2 mb-md-3 mb-lg-5 p-5 " id="rekomendasi-buku">
     <h1 class="fw-bold display-5 mb-4" style="color: #3F72AF;">Rekomendasi untukmu</h1>
     <div class="border-bottom border-primary border-5 my-3" style="width: 120px;"></div>
     <div class="row g-4 mt-3" id="recommendations-container">
       <!-- Kartu buku rekomendasi -->
     </div>
+    <button id="load-more-recommendations" class="btn btn-dark mt-3">
+      <span class="btn-text">Muat Lebih banyak</span>
+      <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+    </button>
   </section>
 
 
@@ -585,6 +599,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- link js -->
      <script src="JS/main.js"></script>

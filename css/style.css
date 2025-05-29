@@ -26,7 +26,7 @@
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 30px 40px rgba(0, 0, 0, 0.1);
 }
 
 .card-img-top {
@@ -72,9 +72,9 @@
   border-radius: 10px;
   overflow: hidden;
   background-color: #fff;
-  border: 1px solid #e9ecef;
+  border: 2px solid #DBE2EF;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
-
 .book-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -94,6 +94,54 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+.bounce-animation {
+  animation: bounce 2s infinite;
+}
+
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+#loading-screen .spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #0d6efd;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+#loading-screen .loading-text {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 20px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 /* Favorite badge */
