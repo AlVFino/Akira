@@ -1,10 +1,10 @@
-        $(document).ready(function() {
-            setTimeout(function() {
-                $("#loading-screen").fadeOut(500, function() {
-                    $(".content").fadeIn(500);
-                });
-            }, 1500);
+$(document).ready(function() {
+    setTimeout(function() {
+        $("#loading-screen").fadeOut(500, function() {
+            $(".content").fadeIn(500);
         });
+    }, 1500);
+});
 
 // Initialize Bootstrap tooltips
 $(function() {
