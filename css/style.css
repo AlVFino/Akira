@@ -19,6 +19,102 @@
   margin-right: 800px;
 }
 
+.card {
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: #f8f9fa;
+}
+
+.animate-zoom {
+  animation: zoomIn 0.3s;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* Category buttons */
+.category-btn {
+  background-color: #ffffff;
+  color: #343a40;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  padding: 1rem 0.5rem;
+}
+
+.category-btn:hover {
+  background-color: #f1f3f5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Book cards */
+.book-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #e9ecef;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Toggle button animation */
+.animate-zoom {
+  animation: zoomInOut 0.5s ease;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Favorite badge */
+.favorite-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ff6b6b;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+/* Rating stars */
+.rating-stars {
+  color: #ffc107;
+}
+
 #footer {
   background-color: #252525;
   color: #FFFFFF;

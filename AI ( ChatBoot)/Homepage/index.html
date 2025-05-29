@@ -88,43 +88,5 @@
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <script>
-        $(document).ready(function() {
-    // 1. Tambahkan elemen loading ke body
-    $('body').prepend(`
-        <div id="loading-screen" style="
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            z-index: 9999;
-            transition: opacity 0.5s ease;
-        ">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="visually-hidden">Loading...</span>
-            </div>
-            <p class="mt-3 text-muted">Memuat Cario AI...</p>
-        </div>
-    `);
-
-    // 2. Animasi loading dengan delay
-    setTimeout(function() {
-        $('#loading-screen').fadeOut(500, function() {
-            $(this).remove();
-        });
-    }, 1500); // Waktu loading 1.5 detik
-
-    // 3. Optional: Handle jika konten selesai dimuat lebih cepat
-    $(window).on('load', function() {
-        $('#loading-screen').fadeOut(300);
-    });
-    });
-    </script>
 </body>
 </html>

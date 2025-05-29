@@ -6,7 +6,7 @@
   <title>Akira</title>
   <link rel="icon" href="img/Modern Public Book Library Logo.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
   <!-- link css -->
   <link rel="stylesheet" href="/css/style.css" />
 </head>
@@ -57,138 +57,80 @@
 <!-- End Navbar -->
 
 
-<!-- Hero Section  -->
+<!-- Hero Section -->
 <section class="Hero min-vh-100 d-flex flex-column justify-content-center align-items-center p-5" id="beranda">
   <div class="text-center mb-5">
     <h1 class="display-3 fw-bold text-dark mb-4" style="letter-spacing: 0.5px;">
       Temukan Buku <span class="text-primary">Favoritmu</span> di Akira
     </h1>
-    <p class="lead fs-4 text-secondary mb-5" style=" line-height: 1.6;">
+    <p class="lead fs-4 text-secondary mb-5" style="line-height: 1.6;">
       Jelajahi ribuan buku dari berbagai genre dan penulis terbaik dalam genggaman Anda
     </p>
   </div>
 
-  <form class="d-flex flex-column w-100 align-items-center" role="search" style="max-width: 700px;">
+  <!-- Form Pencarian -->
+  <form class="d-flex flex-column w-100 align-items-center" style="max-width: 700px;" onsubmit="searchBooks(event)">
     <div class="input-group input-group-lg shadow rounded-pill overflow-hidden mb-3" style="width: 100%; border: 1px solid #dee2e6;">
       <span class="input-group-text bg-white border-0 ps-4">
         <i class="bi bi-search text-muted"></i>
       </span>
       <input 
+        id="searchInput"
         class="form-control border-0 py-3 fs-5" 
         type="search" 
         placeholder="Cari buku, penulis, atau kategori..." 
         aria-label="Search"
         style="background-color: #f8f9fa;"
+        required
       >
-      <button class="btn btn-primary px-4 fs-5 fw-semibold" type="submit" style="border-top-right-radius: 50rem; border-bottom-right-radius: 50rem;">
+      <button class="btn btn-primary px-4 fs-5 fw-semibold" type="submit">
         <i class="bi bi-search me-2"></i> Cari
       </button>
     </div>
     <small class="text-muted mt-2">Contoh: Novel, Sastra, Teknologi, atau nama penulis</small>
   </form>
+
+  <!-- Hasil Pencarian -->
+  <div id="results" class="mt-5 w-100" style="max-width: 800px;"></div>
 </section>
 
-  <!-- Kategori Buku Populer -->
-  <section class="container my-5" id="kategori-buku">
-    <h2>Kategori Buku Populer</h2>
-    <div class="row g-3 mt-3">
+  <!-- Kategori Buku -->
+<section class="container my-5" id="kategori-buku">
+  <h1 class="fw-bold display-6 mb-4" style="color: #3F72AF;">Kategori Buku</h1>
+  <div class="border-bottom border-primary border-5 my-3" style="width: 120px;"></div>
+  <div class="row g-3 mt-3" id="categories-container"></div>
+  <div class="tampilkansemua text-end">
+    <button id="toggle-category-btn" class="btn btn-dark mt-3">
+      <span class="btn-text">Tampilkan Semua Kategori</span>
+      <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+    </button>
+  </div>
+</section>
 
-      <div class="col-md-3">
-        <div class="card">          
-          <div class="card-body">
-            <h5 class="card-title">Fiksi</h5>
-          </div>
-        </div>
-      </div>
 
-      <div class="col-md-3">
-        <div class="card">
-          
-          <div class="card-body">
-            <h5 class="card-title">Non-Fiksi</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card">
-          
-          <div class="card-body">
-            <h5 class="card-title">Biografi</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card">          
-          <div class="card-body">
-            <h5 class="card-title">Sains</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card">          
-          <div class="card-body">
-            <h5 class="card-title">Sejarah</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card">         
-          <div class="card-body">
-            <h5 class="card-title">Teknologi</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card">         
-          <div class="card-body">
-            <h5 class="card-title">Kesehatan</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card">      
-          <div class="card-body">
-            <h5 class="card-title">Pendidikan</h5>
-          </div>
-        </div>
-      </div>
-      <!-- Tambah kategori lain sesuai kebutuhan -->
-    </div>
-    <div class="tampilkansemua text-end">
-      <a href="#" class="btn btn-dark mt-3">Tampilkan Semua Kategori</a>
-    </div>
-  </section>
-
-  <!-- Buku Baru / Rilis Terbaru -->
+  <!-- Semua Buku -->
   <section class="container my-5" id="semua_buku">
-    <h2>Buku Baru</h2>
-    <div class="row g-4 mt-3">
-      <div class="col-md-3">
-        <div class="card">
-          <img src="https://via.placeholder.com/200x300?text=Buku+1" class="card-img-top" alt="Buku 1" />
-          <div class="card-body">
-            <h6 class="card-title">Judul Buku 1</h6>
-            <p class="card-text">Pengarang A</p>
-            <small>⭐ 4.5</small>
-          </div>
-        </div>
-      </div>
-      <!-- Tambah buku baru lain -->
+    <h1 class="fw-bold display-6 mb-4" style="color: #3F72AF;">Semua Buku</h1>
+    <div class="border-bottom border-primary border-5 my-3" style="width: 120px;"></div>
+    <div class="row g-4 mt-3 " id="new-books-container"> 
     </div>
   </section>
 
   <!-- Buku Terpopuler -->
-  <section class="container my-5" id="buku-terpopuler">
-    <h2>Buku Terpopuler</h2>
-    <div class="row g-4 mt-3">
-      <!-- Kartu buku populer -->
+   <section id="buku_favorit" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Buku Favorit Pembaca</h2>
+    <div class="row" id="favorite-books-container">
+      <!-- Books will be loaded here -->
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Rekomendasi untukmu -->
   <section class="container my-5" id="rekomendasi-buku">
-    <h2>Rekomendasi untukmu</h2>
-    <div class="row g-4 mt-3">
+    <h1 class="fw-bold display-5 mb-4" style="color: #3F72AF;">Rekomendasi untukmu</h1>
+    <div class="border-bottom border-primary border-5 my-3" style="width: 120px;"></div>
+    <div class="row g-4 mt-3" id="recommendations-container">
       <!-- Kartu buku rekomendasi -->
     </div>
   </section>
@@ -644,10 +586,8 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-<script>
-   const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-  const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
-</script>
-
+    <!-- link js -->
+     <script src="JS/main.js"></script>
+     
 </body>
 </html>
